@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Carboncor Madagascar</title>
+    <script src="{% static 'module/angular/angular.js' %}"></script>
+    <script src="{% static 'module/angularResource/angular-resource.js' %}"></script>
+    <script src="{% static 'module/AngularRoute/angular-route.js' %}"></script>
+    <script src="{% static 'module/youtubeEmbended/ng-youtube-embed.min.js' %}"></script>
+
+    <script src="{% static 'module/angular-jwt/angular-jwt.min.js' %}"></script>
+
+
+    <script src="{% static 'module/jquery/jquery.min.js' %}"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <script src="{% static 'module/jquery/jquery.bxslider.min.js' %}"></script>-->
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/Dosis-Regular.ttf' %}" type="text/css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'html/stylesheets/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'module/bootstrap/bootstrap.min.css' %}"/>
+</head>
+
+
+<!-- HEADER -->
+<header class="container-fluid">        <!-- CONTENEUR PLEINE LARGEUR -->
+    <div class="container">
+        <div class="row"><a href="#/" class="logo"><img alt="Carboncor"
+                                                        src="{% static 'img/carboncor-logo-header.svg'%}"></a></div>
+    </div>
+    <div class="navcbr container-fluid">
+        <div class="container">
+            <nav class="navbar navbar-default row">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="acceuil" class="active"><a href="#/">Accueil</a></li>
+                    <li id="generalite" class=""><a href="#/generalite">Generalite</a></li>
+
+                    <!-- MENU DEROULANT -->
+                    <li id="produit" class="dropdown hoves"><a href="#/road-surfacing/technical" class="dropdown-toggle"
+                                                               data-toggle="dropdown">Conseil technique et mode
+                        d'emploi</a>
+                        <ul class="dropdown-menu">
+                            <li id="road"><a href="#/road-surfacing/technical">Surfaçage de route</a></li>
+                            <li id="repair"><a href="#/road-resurfacing/technical">Réparation et entretien</a></li>
+                        </ul>
+                    </li>
+                    <!-- FIN MENU DEROULANT -->
+                    <li id="environnement"><a href="#/environnement">Environnement</a></li>
+                    <li id="technologie"><a href="#/technologie">Technologie</a></li>
+                    <li id="galery"><a href="#/galery">Galerie Photos</a></li>
+                    <li id="contact"><a href="#/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- 	FIN HEADER -->
+<section class="banner container-fluid">
+    <h1 class="container">Une révolution dans la construction </br> des routes et des pistes
+    </h1>
+</section>
+
+<!-- BANNIERE -->
+<!-- FIN HEADER -->
+
+
+<!--  CONTENU DU SITE  -->
+<body ng-app="app">
+
+<div class="bc"></div>
+<div class="container content">
+    <div class="row">
+
+        <!-- APPEL PAGE -->
+        <div ng-view>
+
+        </div>
+        <!-- FN APPEL PAGE -->
+
+        <section class="col-lg-4 colonne-2">
+            <div class="container quicklinks col-lg-12">
+                <h2>ARCHIVES NUMERIQUES</h2>
+                <p class="btn-video"><a href="#/videos">Video's</a></p>
+                <p class="btn-brochure"><a href="#/brochures">Brochures </a></p>
+
+
+                <p class="chapeau">.</p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+                <p class="chapeau"></p>
+
+
+                </br>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="container-fluid">
+    <div class="container">
+        <div class="text-center footerlink"><a id="foot-acceuil" href="#/">Accueil</a> | <a id="foot-generalite" href="#/generalite">Généralité</a> | <a id="foot-road" href="#/road-surfacing/technical">surfaçage
+            de route </a> | <a id="foot-repair" href="#/road-resurfacing/technical">Réparation et entretien</a> | <a id="foot-environnement" href="#/environnement">Environnement</a> | <a href="#/emploi">Création
+            d'emploi</a> | <a id="foot-galery" href="#/galery">Galerie photos</a> | <a id="foot-contact" href="#/contact">Contactez nous</a></span></div>
+        <p class="text-center registered">© Copyright 2017. Carboncor Ocean Indien. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<!-- FIN FOOTER -->
+<!-- SCRIPT -->
+<script>
+    var $buoop = {vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4};
+
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    }
+    catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
+</script>
+<script>
+
+</script>
+<script src="{% static 'module/jquery/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'inform_actuel/movie_index.js' %}"></script>
+
+</body>
+</html>
+
+
